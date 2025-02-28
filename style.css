@@ -317,7 +317,49 @@ body {
   color: var(--primary-color);
   font-size: 1.25rem;
 }
+.officers-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+width: 100%;
+}
+.officer-head {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2.5rem;
 
+
+}
+.officer {
+  margin-top: 20px;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.officer img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10%;
+  object-fit: contain;
+}
+.officer h3 {
+  margin: 10px 0 5px;
+}
+.officer p {
+  color: gray;
+}
+@media screen and (max-width: 768px) {
+  .officers-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .officer {
+      width: 80%;
+  }
+}
 @media (max-width: 600px) {
   .contact-item {
       align-items: flex-start;
