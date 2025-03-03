@@ -572,6 +572,9 @@ width: 100%;
   border-radius: 5%;
 
 }
+.footer-section p{
+  flex-wrap: wrap;
+}
 
 .primary-btn:hover {
   transform: translateY(-2px);
