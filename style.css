@@ -709,7 +709,9 @@ footer {
   .footer-section .contact-item {
     justify-content: center;
   }
-
+.footer-section p{
+  flex-wrap: wrap;
+}
   .social-links {
     justify-content: center;
   }
