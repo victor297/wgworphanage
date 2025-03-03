@@ -392,11 +392,11 @@
     const message = document.getElementById("message").value;
 
     // Encode the values for the mailto link
-    const subject = encodeURIComponent("New Contact Form Message");
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    const subject = encodeURIComponent(" Madam Grace Woghiren Obamedo Memorial Orphanage Home");
+    const body = encodeURIComponent(`${name}\ ${message} \n ${email}`);
 
     // Create the mailto link
-    const mailtoLink = `mailto:youremail@example.com?subject=${subject}&body=${body}&cc=carboncopy@email.com&bcc=blindcarboncopy@email.com`;
+    const mailtoLink = `mailto:info@madamgracewoghirenorphanage.com?subject=${subject}&body=${body}`;
 
     // Open user's email client
     window.location.href = mailtoLink;
