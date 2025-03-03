@@ -232,26 +232,24 @@
             <p class="section-subtitle">Your generosity can change lives. Choose your preferred way to donate.</p>
             <div class="donation-options">
                 <div class="donation-card">
-                    <h3>Monthly Sponsor</h3>
+                    <h3>Sponsor</h3>
                     <!-- <div class="amount">$50</div> -->
-                    <p>Support a child's monthly needs</p>
+                    <p>Support a child's needs</p>
                     <button class="primary-btn"><b>BANK ACC:</b> 2046334985 <br> <hr> <b>BANK NAME: </b>FIRST BANK <br/> <hr>
 <b>NAME: </b>MADAM GRACE WOGHIREN OBAMEDO MEMORIAL ORPHANAGE HOME  <hr> </button>
                 </div>
-                <div class="donation-card">
+                <!-- <div class="donation-card">
                     <h3>Quarterly Sponsor</h3>
-                    <!-- <div class="amount">$150</div> -->
                     <p>Support a child's quarterly needs</p>
                     <button class="primary-btn"><b>BANK ACC:</b> 2046334985 <br> <hr> <b>BANK NAME: </b>FIRST BANK <br/> <hr>
                         <b>NAME: </b>MADAM GRACE WOGHIREN OBAMEDO MEMORIAL ORPHANAGE HOME  <hr> </button>
                 </div>
                 <div class="donation-card">
                     <h3>Yearly Sponsor</h3>
-                    <!-- <div class="amount">$500</div> -->
                     <p>Support a child's yearly needs</p>
                     <button class="primary-btn"><b>BANK ACC:</b> 2046334985 <br> <hr> <b>BANK NAME: </b>FIRST BANK <br/> <hr>
                         <b>NAME: </b>MADAM GRACE WOGHIREN OBAMEDO MEMORIAL ORPHANAGE HOME  <hr> </button>
-                </div>
+                </div> -->
             </div>
             <div class="donation-form">
                 <form id="donateForm">
@@ -379,11 +377,30 @@
         });
 
         // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon!');
-            this.reset();
-        });
+        // document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     alert('Thank you for your message. We will get back to you soon!');
+        //     this.reset();
+        // });
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents actual form submission
+
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Encode the values for the mailto link
+    const subject = encodeURIComponent("New Contact Form Message");
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+    // Create the mailto link
+    const mailtoLink = `mailto:youremail@example.com?subject=${subject}&body=${body}&cc=carboncopy@email.com&bcc=blindcarboncopy@email.com`;
+
+    // Open user's email client
+    window.location.href = mailtoLink;
+});
     </script>
 </body>
 </html>
